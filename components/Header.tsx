@@ -30,7 +30,7 @@ export default function Header() {
         href={"/"}
       >
         <RiHomeSmile2Line size={20} />
-        <p className="">Comfea</p>
+        <p className="">HouseKart</p>
       </Link>
 
       <div
@@ -44,16 +44,20 @@ export default function Header() {
           } flex-col p-3 md:p-0 gap-2 md:flex-row  flex md:space-x-4 md:justify-center md:items-center lg:gap-4 `}
         >
           <div className="flex justify-between items-center md:hidden ">
-            <div className="flex items-center space-x-1 py-2 ">
+            <div className="flex items-center space-x-1 py-2 text-primary hover:text-primary transition-all duration-300 ease-in cursor-pointer">
               <RiHomeSmile2Line size={20} />
-              <p className="">Comfea</p>
+              <p className="">HouseKart</p>
             </div>
             <div>
-              <IoMdClose size={20} onClick={() => setIsMenuOpen(false)} />
+              <IoMdClose
+                className=""
+                size={20}
+                onClick={() => setIsMenuOpen(false)}
+              />
             </div>
           </div>
 
-          <hr className="border-gray-300 border md:hidden" />
+          <hr className="border-gray-100 border md:hidden" />
           <Link
             href={"/buy"}
             className="flex items-center space-x-1 gap-1 cursor-pointer hover:text-primary group"
@@ -92,7 +96,7 @@ export default function Header() {
           >
             About
           </Link>
-          <hr className="border-gray-300 border md:hidden my-2 " />
+          <hr className="border-gray-100 border md:hidden my-2 " />
         </ul>
       </div>
       <div className="flex items-center space-x-4">
