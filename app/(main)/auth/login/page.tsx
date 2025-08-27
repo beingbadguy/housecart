@@ -1,15 +1,17 @@
 "use client";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { MdOutlineMail } from "react-icons/md";
 import { PiPassword } from "react-icons/pi";
+import { RiHomeSmile2Line } from "react-icons/ri";
 
 const LoginPage = () => {
   const router = useRouter();
   return (
     <div className="flex items-center justify-center h-[90vh] flex-col ">
-      <div className="absolute top-16 left-4 cursor-pointer flex items-center space-x-2 ">
-        <h1 onClick={() => router.push("/")}>Home</h1>
+      <div className="absolute top-16 left-4 cursor-pointer flex items-center space-x-2 z-0">
+        <Link href={"/"}>Home</Link>
         <span>/</span>
         <p className="text-primary">Login</p>
       </div>
@@ -42,12 +44,13 @@ const LoginPage = () => {
           </div>
         </div>
         <div>
-          <p
+          <Link
+            href={"/auth/forget-password"}
             className="text-sm text-primary cursor-pointer"
-            onClick={() => router.push("/auth/forget-password")}
+            // onClick={() => router.push("/auth/forget-password")}
           >
             Forgot Password?
-          </p>
+          </Link>
         </div>
         <div className="flex items-center cursor-pointer rounded-md  space-x-2 lg:w-[400px] w-[300px] sm:w-[350px]">
           <button className="bg-primary cursor-pointer text-white w-full p-2 rounded-md">

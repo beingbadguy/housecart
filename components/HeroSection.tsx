@@ -12,10 +12,10 @@ import { BsHouse, BsHouseLock } from "react-icons/bs";
 import { RiLandscapeAiLine } from "react-icons/ri";
 
 const HeroSection = () => {
-  const options = ["Buy", "Rent"];
+  const options = ["Buy", "Rent", "Sell"];
   return (
     <div className="flex  items-center justify-center flex-col h-[90vh] md:h-[84vh] mx-4">
-      <h1 className=" text-4xl md:text-5xl font-bold  text-center text-black heading">
+      <h1 className=" text-4xl md:text-5xl text-center text-black heading">
         Find your dream house with your love
       </h1>
       <p className=" text-md md:text-xl text-center my-1 text-gray-400">
