@@ -1,30 +1,29 @@
-import React from "react";
-import { FaRegCalendarAlt } from "react-icons/fa";
-import { FaRegUser } from "react-icons/fa6";
+import Marquee from "react-fast-marquee";
 import { GoSearch } from "react-icons/go";
+import { FaRegCalendarAlt, FaRegUser } from "react-icons/fa";
 import { RiFilePaperLine } from "react-icons/ri";
 
-const Slider = () => {
+export default function HouseKartSteps() {
   return (
-    <div className="w-full bg-primary text-white flex-col gap-2  items-start justify-start md:flex-row flex md:items-center md:justify-between px-5 p-4  ">
-      <div className="flex items-center space-x-1">
-        <GoSearch />
-        <p>Find your ideal property</p>
-      </div>
-      <div className="flex items-center space-x-1">
-        <FaRegCalendarAlt />
-        <p>Schedule a visit</p>
-      </div>
-      <div className="flex items-center space-x-1">
-        <FaRegUser />
-        <p>Contact the agent</p>
-      </div>
-      <div className="flex items-center space-x-1">
-        <RiFilePaperLine />
-        <p>Complete the paperwork</p>
-      </div>
+    <div className="bg-primary py-4">
+      <Marquee gradient={false} speed={50} pauseOnHover={true}>
+        <div className="flex items-center space-x-2 mx-12 text-white">
+          <GoSearch className="text-xl" />
+          <p className="text-lg">Find your ideal property</p>
+        </div>
+        <div className="flex items-center space-x-2 mx-12 text-white">
+          <FaRegCalendarAlt className="text-xl" />
+          <p className="text-lg">Schedule a visit</p>
+        </div>
+        <div className="flex items-center space-x-2 mx-12 text-white">
+          <FaRegUser className="text-xl" />
+          <p className="text-lg">Contact the agent</p>
+        </div>
+        <div className="flex items-center space-x-2 mx-12 text-white">
+          <RiFilePaperLine className="text-xl" />
+          <p className="text-lg">Complete the paperwork</p>
+        </div>
+      </Marquee>
     </div>
   );
-};
-
-export default Slider;
+}
